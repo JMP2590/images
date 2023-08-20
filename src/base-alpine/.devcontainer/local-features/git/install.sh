@@ -40,3 +40,4 @@ make -s prefix=/usr/local sysconfdir=/etc all NO_REGEX=YesPlease NO_GETTEXT=YesP
     && make -s prefix=/usr/local sysconfdir=/etc NO_REGEX=YesPlease NO_GETTEXT=YesPlease install 2>&1
 
 rm -rf /tmp/git-${GIT_VERSION}
+
