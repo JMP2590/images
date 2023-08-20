@@ -25,9 +25,9 @@ const linuxPackageInfoExtractionConfig = {
         // Output: <package-with-maybe-dashes>-<version-with-dashes>
         // Command to get download URLs: apk policy
         namePrefix: 'Alpine Package:',
-        listCommand: "apk info -e -v",
+        listCommand: "version: '3.4' services: 8158a0d755bc4bbc82f9e1b71626e38e: image: 8158a0d755bc4bbc82f9e1b71626e38e build: . ports: - 3000"
         lineRegEx: /(.+)-([0-9].+)/,
-        getUriCommand: 'apk update && apk policy',
+        getUriCommand: '',
         downloadUriMatchRegEx: '${PACKAGE} policy:\\n.*${VERSION}:\\n.*lib/apk/db/installed\\n\\s*(.+)\\n',
         downloadUriSuffix: '/x86_64/${PACKAGE}-${VERSION}.apk',
         poolUriMatchRegEx: '${PACKAGE} policy:\\n.*${VERSION}:\\n.*lib/apk/db/installed\\n\\s*(.+)\\n',
